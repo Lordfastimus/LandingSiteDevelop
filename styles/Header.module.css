@@ -1,0 +1,44 @@
+.navContainer,
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.headerContainer {
+  justify-content: space-between;
+}
+
+.navContainer {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.navItem {
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+.productCart {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding-top: 6px;
+}
+.productCart img {
+  height: 28px;
+}
+.productCartNumber {
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+}
+
+.productCartNumber {
+  position: absolute;
+}

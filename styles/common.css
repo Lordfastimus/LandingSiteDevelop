@@ -1,0 +1,12 @@
+.mediumContentContainer, .smallContentContainer {
+  margin: auto;
+  padding: 20px;
+}
+
+.mediumContentContainer {
+  max-width: 1200px;
+}
+
+.smallContentContainer {
+  max-width: 800px;
+}

@@ -1,0 +1,33 @@
+.pageContainer {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-rows: auto 1fr 60px;
+  grid-gap: 10px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.pageHeader {
+  grid-area: header;
+}
+
+.pageFooter {
+  grid-area: footer;
+}
+
+.pageMain {
+  grid-area: main;
+  padding: 0;
+}
+
+.pageHeader {
+  padding: 20px;
+}
+
+.pageFooter {
+  padding: 20px;
+  background: gold;
+}
