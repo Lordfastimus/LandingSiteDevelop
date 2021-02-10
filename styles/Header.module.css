@@ -1,25 +1,27 @@
-.navContainer,
+.desktopNav,
 .headerContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: auto;
-  max-width: 1200px;
 }
 
 .headerContainer {
   justify-content: space-between;
 }
 
-.navContainer {
-  font-weight: 700;
-  font-size: 14px;
-  padding: 0 20px;
+@media (max-width: 800px) {
+  .desktopNav {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .smallNav {
+    display: initial;
+  }
 }
 
 .navItem {
-  margin-left: 20px;
-  white-space: nowrap;
 }
 
 .productCart {

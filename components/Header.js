@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "styles/Header.module.css";
+import Button from "@material-ui/core/Button";
+import AppBar from "@material-ui/core/AppBar";
 
 const navItems = [
   {
@@ -32,31 +34,41 @@ const navItems = [
   },
 ];
 
+function DesctopNav() {
+  return (
+    <nav className={styles.desktopNav}>
+      {navItems.map((navItem, index) => {
+        return (
+          <div className={styles.navItem} key={index}>
+            <Link href={navItem.url}>
+              <Button color="inherit" size="large">
+                {navItem.text}
+              </Button>
+            </Link>
+          </div>
+        );
+      })}
+    </nav>
+  );
+}
+
 function Header() {
   return (
-    <>
+    <AppBar position="fixed" style={{ padding: "10px" }}>
       <div className={styles.headerContainer}>
         <Link href={"/"}>
           <a>
             <img src="/logo.png" alt="Лого" />
           </a>
         </Link>
-        <nav className={styles.navContainer}>
-          {navItems.map((navItem, index) => {
-            return (
-              <div className={styles.navItem} key={index}>
-                <Link href={navItem.url}>
-                  <a>{navItem.text}</a>
-                </Link>
-              </div>
-            );
-          })}
-        </nav>
+        <DesctopNav />
         <Link href="mailto: abc@example.com">
-          <a>Написать нам на почту</a>
+          <Button size="large" color="inherit">
+            Написать нам на почту
+          </Button>
         </Link>
       </div>
-    </>
+    </AppBar>
   );
 }
 

@@ -1,3 +1,4 @@
+import Button from '@material-ui/core/Button';
 import styles from "styles/Banners.module.css";
 
 function MainBanner({ anchor }) {
@@ -7,7 +8,9 @@ function MainBanner({ anchor }) {
         <div className="smallContentContainer">
           <h1>Создаем сайты для вас</h1>
           <p>Качественно, быстро и красиво</p>
-          <button>Хочу сайт</button>
+          <Button color="primary" size="large" variant="contained">
+            Хочу сайт
+          </Button>
         </div>
       </section>
     </>
