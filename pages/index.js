@@ -1,24 +1,39 @@
-import BasicPage from "components/BasicPage";
-import MainBanner from "components/banners/MainBanner";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+
+const workMail = "work@mail.ru";
 
 export default function Home() {
   return (
-    <BasicPage title="Создание сайтов LandingPage Сайт визитка">
-      <MainBanner ancor="home" />
-      {/* <ProductsBanner ancor="products" /> */}
-      <section>
-        <h2>Типы сайтов</h2>
-        <section>
-          Сайты по готовым дизайнам 10т - 20т. Лендинг по вашим пожаланиям от
-          30т Веб проекты любой сложности
-        </section>
-      </section>
-      <section>
-        <h1>Услуги seo, хостинг</h1>
-      </section>
-      <section>
-        <h1>контакты</h1>
-      </section>
-    </BasicPage>
+    <div className={styles.container}>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className={styles.main}>
+        <h1 className={styles.title}>Мы делаем рабочие сайты</h1>
+
+        <p className={styles.description}>
+          Сайт визитка, LandingPage, Многостраничный сайт, Блог, Интернет
+          магазин
+        </p>
+
+        <a
+          href={`mailto:${workMail}?subject=Заявка на сайт`}
+          className={styles.card}
+        >
+          <h3>Оставьте сообщение &rarr;</h3>
+          <p>Напишите нам и мы поможем вам получить сайт</p>
+        </a>
+      </main>
+
+      <footer className={styles.footer}>
+        <a href={`mailto:${workMail}?subject=Связь с командой`}>
+          Разработано нами
+          {/* <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} /> */}
+        </a>
+      </footer>
+    </div>
   );
 }
